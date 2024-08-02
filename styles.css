@@ -84,5 +84,22 @@ html{
     box-shadow: 2px 2px 5px rgb(40, 40, 40);
 }
 
+.result-box{
+    background-color: var(--color-purple-dark);
+    padding: 10px 5px;
+    border-radius: 5px;
+    margin-top: 25px;
+}
+
+.result-text{
+    font-size: 28px;
+    color: var(--color-beige);
+    text-align: center;
+}
+
+.hidden{
+    display: none;
+}
+
 
 
