@@ -2,6 +2,11 @@ const userInput = document.getElementById('text-input');
 const checkButton = document.getElementById('check-btn');
 const resultSpan = document.getElementById('result');
 
+checkButton.addEventListener('click', () => {
+    checkPalindrome(userInput.value);
+    userInput.value = '';
+});
+
 /*
 * checkPalindrome 
 * 
@@ -13,7 +18,7 @@ const resultSpan = document.getElementById('result');
 const checkPalindrome = input => {
     const firstInput = input;
 
-    if(checkBlankInput(input)){
+    if(!checkBlankInput(input)){
         alert('Please enter a word');
         return;
     }
@@ -32,7 +37,7 @@ const checkPalindrome = input => {
 */
 const showResult = (resultMessage) => {
     const resultP = document.createElement('p');
-    resultP.className('result-text');
+    resultP.className = 'result-text';
     resultP.innerHTML = resultMessage
     resultSpan.appendChild(resultP);
     resultSpan.classList.remove('hidden');
