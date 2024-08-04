@@ -17,6 +17,8 @@ html{
     --color-purple-light : rgb(182, 146, 194);
     --color-pink: rgb(227, 165, 199);
     --color-beige: rgb(255, 223, 214);
+    --color-dark-blue: rgb(38, 65, 84);
+    --color-yellow: rgb(253, 179, 4);
 }
 
 .container-main{
@@ -101,5 +103,38 @@ html{
     display: none;
 }
 
+.container-footer{
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    margin-right: 200px;
+}
 
+.banner{
+    margin-top: 70px;
+    background-color: var(--color-beige);
+    padding: 15px;
+    border-radius: 5px;
+    text-align: right;
+}
 
+.banner p{
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(40, 40, 40);
+}
+
+.banner a{
+    text-decoration: none;
+    background-color: var(--color-purple-dark);
+    color: var(--color-beige);
+    padding: 5px;
+    border-radius: 5px;
+    transition: .3s;
+}.banner a:hover{
+    background-color: var(--color-dark-blue);
+    color: var(--color-yellow);
+    box-shadow: 2px 2px 5px rgb(40, 40, 40);
+    text-shadow: 1px 1px 5px var(--color-yellow);
+    text-decoration: underline;
+}
