@@ -111,7 +111,7 @@ html{
 }
 
 .banner{
-    margin-top: 70px;
+    margin-top: 10px;
     background-color: var(--color-beige);
     padding: 15px;
     border-radius: 5px;
