@@ -2,18 +2,24 @@ const userInput = document.getElementById('text-input');
 const checkButton = document.getElementById('check-btn');
 const resultSpan = document.getElementById('result');
 
+/**
+ * Event listener for the check button click.
+ * Calls the checkPalindrome function with the user's input value.
+ * Clears the user input field.
+ */
 checkButton.addEventListener('click', () => {
     checkPalindrome(userInput.value);
     userInput.value = '';
 });
 
-/*
-* checkPalindrome 
-* 
+/** 
 * Is the main function, get's the user's input
 * and checks if the word is blank, if is not 
 * checks if it is a palindrome and shows a 
 * result.
+* 
+* @param {String} input - The user's input to be checked.
+* @returns {void}
 */
 const checkPalindrome = input => {
     const firstInput = input;
@@ -29,11 +35,12 @@ const checkPalindrome = input => {
     showResult(resultMessage);
 }
 
-/*
-* showResult
-*
+/**
 * Uses the result message to build and append the
-* result elements to show the result
+* result elements to show the result.
+* 
+* @param {string} resultMessage - The result message to be shown.
+* @returns {void}
 */
 const showResult = (resultMessage) => {
     const resultP = document.createElement('p');
@@ -43,15 +50,17 @@ const showResult = (resultMessage) => {
     resultSpan.classList.remove('hidden');
 }
 
-/*
-* checkWord
-* 
+/** 
 * It receives the fixed word and the original 
 * word and returns a text.
 *
 * The text uses a ternary operator to check if the word
 * is a palindrome and completes it by assigning 
 * 'is' or 'is not' depending on the condition.
+*
+* @param {string} fixedWord - The fixed word to be checked.
+* @param {string} originalWord - The original user input.
+* @returns {string} - The result message.
 */
 const checkWord = (fixedWord, firstInput) => {
     return `
@@ -61,11 +70,12 @@ const checkWord = (fixedWord, firstInput) => {
     `;
 }
 
-/*
-* checkBlankInput
-*
+/**
 * It receives a text and returns a value
 * depending if the text is blank or not.
+* 
+* @param {string} input - The input to be checked.
+* @param {boolean=} - True if the text is blank.
 */
 const checkBlankInput = input => {
     return input === '' ? false : true;
