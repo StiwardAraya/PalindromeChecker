@@ -103,38 +103,39 @@ html{
     display: none;
 }
 
-.container-footer{
-    display: flex;
+.container-header{
+    background-color: transparent;
+    position: fixed;
     width: 100%;
-    justify-content: right;
-    margin-right: 200px;
+    top: 0;
+    left: 0;
+    padding: 10px 20px 10px 20px;
 }
 
-.banner{
-    margin-top: 10px;
-    background-color: var(--color-beige);
-    padding: 15px;
-    border-radius: 5px;
-    text-align: right;
+header ul{
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
 }
 
-.banner p{
-    font-size: 18px;
-    font-weight: bold;
-    color: rgb(40, 40, 40);
+header ul li{
+    list-style: none;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    margin : 0 50px 0 50px;
 }
 
-.banner a{
+header ul li a{
     text-decoration: none;
-    background-color: var(--color-purple-dark);
     color: var(--color-beige);
-    padding: 5px;
-    border-radius: 5px;
-    transition: .3s;
-}.banner a:hover{
-    background-color: var(--color-dark-blue);
-    color: var(--color-yellow);
-    box-shadow: 2px 2px 5px rgb(40, 40, 40);
-    text-shadow: 1px 1px 5px var(--color-yellow);
-    text-decoration: underline;
+    font-size: 24px;
+    transition: .5s;
+}header ul li a:hover{
+    color: white;
+    text-shadow: 0 0 20px white;
 }
+
+
